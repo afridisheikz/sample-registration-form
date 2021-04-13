@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><meta name="viewport" content="width=device-width,initial-scale=1">  
+        <title> Registration form   </title>  
+        <style>
+            
+            .heading{ background-color:black; color: white; opacity: 0.6; font-weight: bolder; margin-top: 5px;}
+            .container{
+                /* background-image: radial-gradient(rgb(148, 206, 221),rgb(16, 121, 148) ); <-- this is to provide colour gradient */
+                background-color:rgb(55, 253, 65);  
+                padding: 30px 50px 50px 50px;
+                opacity:0.85;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                /* border-bottom: 10px groove rgb(4, 53, 2); add border in bottom */
+                /* border-radius: 50px; this is used to round up the corners of box  */
+                
+                
+                }
+            body{background-image: url("form_bg.jpg");   background-size: 1500px 1015px; background-repeat: no-repeat; 
+             background-color: rgb(59, 71, 59);  background-blend-mode: multiply; /* <- this is used to blend a colour over image */
+            font-family: calibri; padding-left: 20px; margin: 0 250px 12px 300px;}
+            input[type=text],input[type=password],textarea{
+                width: 92%;
+                padding:10px;
+                border: darkgray;
+                display: inline-block;
+                margin:5px 0 15px 0;
+                background-color: whitesmoke;
+
+            }
+            #special{ width: 5%;}
+            #special2{ width: 84%;}
+            
+            div{padding: 5px 0;}
+            .registerbtn{
+                /* opacity: 0.9; */
+                width: 90%;
+                margin: 8px 0 0 20px;
+                padding:15px 15px;
+                border: none;
+                background-color: rgb(34, 1, 2);  
+                color: white;              
+            }
+            /* when we clicked the button to give to blowing bright colour  */
+            .registerbtn:hover{ opacity:1;}
+
+        </style> 
+    </head>
+    <body>
+        <form>
+           
+            <div class="heading"><center> <font face="helvetica" size="6"><b>Student Registration Form</b></font> </center><hr width=99% color="white" size="2"></div>
+            <div class="container">
+           <!-- first name -->
+           
+               <label>FirstName</label> <br>
+            <input type="text" maxlength="50" name="FirstName" placeholder="First Name" required/><br>
+                
+            <!-- middle name -->
+            
+            <label>MiddleName</label> <br> 
+           <input type="text" maxlength="50" name="MiddleName" placeholder="Middle Name" /><br>
+                
+            <!-- last name -->
+            
+            <label> LastName </label><br>
+            <input type="text" maxlength="50" name="LastName" placeholder="Last Name" required/><br>
+                
+            <!-- choose course -->
+            <div>
+                <label>course :</label>&nbsp;&nbsp;    
+                    <select>
+                        <option selected>course</option>
+                        <option value="1">Sci-mathbio</option>
+                        <option value="2">Sci-Maths</option>
+                        <option value="3">Sci-Biology</option>
+                        <option value="4">Commerce</option>
+                        <option value="5">Humanities</option>
+                        </select><br>
+            </div>   
+                
+            <!-- Select Gender -->
+            <div>
+                <label> Gender :</label> &nbsp;&nbsp;
+                 <input type="radio"  name="gender" value="Male"/> Male
+                 <input type="radio"  name="gender" value="other"/> Female
+                 <input type="radio"  name="gender" value="other"/> Other
+            </div>    
+            <!-- contact details -->
+                <label>Phone : </label><br>
+                <input type="text"  name="country code"  value="+91" size="2"  id="special"> 
+                <input type="text"  name="phone" placeholder="phone no."  size="10" required id="special2"> <br>
+   
+            <!-- address -->
+                <label>Current Address :</label><br>
+                <textarea rows="4" cols="80" placeholder="Current Address" value="address"></textarea><br>
+            <!-- Email and Password Details -->
+                <label><b>Email : </b></label><br>
+                <input type="text"  name="email" placeholder="Enter Email" required/> <br>
+                <label><b>Password :</b></label><br>
+                <input type="password"  name="password" placeholder="Enter Password"  required/> <br>
+                <label><b>Re-type Password :</b></label>
+                <input type="password"  name="retype password" placeholder="Retype Password"  required/> <br>
+            <!-- Register Button -->
+                <button type="submit" class=registerbtn>Register</button>
+        
+        </form>
+    </body>
+</html>
+
